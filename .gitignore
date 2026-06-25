@@ -5,6 +5,9 @@
 # Local packaging / preview artifacts
 /_deploy/
 
+# Claude Code local harness files
+/.claude/
+
 # OS / editor cruft
 Thumbs.db
 desktop.ini
