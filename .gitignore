@@ -1,0 +1,11 @@
+# Local archives — original full-res photos & source CVs (not used by the site)
+/pictures/
+/cv/
+
+# Local packaging / preview artifacts
+/_deploy/
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
