@@ -104,6 +104,7 @@ a { color: inherit; text-decoration: none; }
 .nav__links {
   display: flex;
   gap: 2.2rem;
+  margin-left: clamp(2rem, 6vw, 4.5rem);
 }
 .nav__links a {
   font-size: 0.82rem;
@@ -319,7 +320,7 @@ a { color: inherit; text-decoration: none; }
 .break img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 10%;
   opacity: 0.92;
 }
 .break__quote {
@@ -689,6 +690,7 @@ a { color: inherit; text-decoration: none; }
     position: fixed;
     inset: 0 0 0 auto;
     width: min(76vw, 320px);
+    margin-left: 0;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
