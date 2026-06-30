@@ -28,24 +28,11 @@
     a.addEventListener("click", closeMenu)
   );
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- Reveal on load ---------- */
   const reveals = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-in");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    reveals.forEach((el) => io.observe(el));
-  } else {
+  requestAnimationFrame(() => {
     reveals.forEach((el) => el.classList.add("is-in"));
-  }
+  });
 
   /* ---------- Featured video (click-to-play facade) ----------
      YouTube's player needs a real http(s) origin. When the page is
@@ -72,9 +59,10 @@
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  /* ---------- Lightbox ---------- */
+  /* ---------- Lightbox (gallery page only) ---------- */
   const grid = document.getElementById("grid");
   const lightbox = document.getElementById("lightbox");
+  if (grid && lightbox) {
   const lbImg = document.getElementById("lbImg");
   const lbClose = document.getElementById("lbClose");
   const lbPrev = document.getElementById("lbPrev");
@@ -117,4 +105,5 @@
     if (e.key === "ArrowLeft") show(current - 1);
     if (e.key === "ArrowRight") show(current + 1);
   });
+  }
 })();

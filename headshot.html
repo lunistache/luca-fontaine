@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-i18n="meta.title.headshot">Headshots — Luca Fontaine</title>
+<meta name="description" content="Headshots of actor Luca Fontaine — French–Italian–American actor, Juilliard MFA." />
+<meta name="author" content="Luca Fontaine" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Luca Fontaine — Headshots" />
+<meta property="og:description" content="Headshots — French–Italian–American actor, Juilliard MFA." />
+<meta property="og:image" content="assets/img/headshot-01.jpg" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">Luca&nbsp;Fontaine</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="headshot.html" class="is-active" aria-current="page" data-i18n="nav.headshot">Headshots</a>
+      <a href="resume.html" data-i18n="nav.resume">Resume</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" id="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Headshots ===== -->
+  <section class="section section--top" id="headshot">
+    <div class="section__head reveal">
+      <p class="eyebrow" data-i18n="headshot.eyebrow">Photography</p>
+      <h2 class="section__title" data-i18n="headshot.title">Headshots</h2>
+    </div>
+
+    <div class="headshots" id="grid">
+      <figure class="grid__item reveal"><img src="assets/img/headshot-01.jpg" alt="Luca Fontaine headshot" loading="lazy" /></figure>
+      <figure class="grid__item reveal"><img src="assets/img/headshot-02.jpg" alt="Luca Fontaine headshot" loading="lazy" /></figure>
+      <figure class="grid__item reveal"><img src="assets/img/headshot-03.jpg" alt="Luca Fontaine headshot" loading="lazy" /></figure>
+      <figure class="grid__item reveal"><img src="assets/img/headshot-09.jpg" alt="Luca Fontaine headshot" loading="lazy" /></figure>
+      <figure class="grid__item reveal"><img src="assets/img/headshot-bw-01.jpg" alt="Luca Fontaine, black and white headshot" loading="lazy" /></figure>
+      <figure class="grid__item reveal"><img src="assets/img/headshot-08.jpg" alt="Luca Fontaine, black and white headshot" loading="lazy" /></figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__name">Luca Fontaine</p>
+  <p class="footer__meta"><span data-i18n="footer.meta">Actor · Dialect Coach</span> — <span id="year"></span></p>
+</footer>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img class="lightbox__img" id="lbImg" src="" alt="" />
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

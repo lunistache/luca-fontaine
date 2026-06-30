@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-i18n="meta.title.contact">Contact — Luca Fontaine</title>
+<meta name="description" content="Representation and enquiries for actor Luca Fontaine — management by Brad Gelfond (Strike Up the Brand) and direct contact." />
+<meta name="author" content="Luca Fontaine" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Luca Fontaine — Contact" />
+<meta property="og:description" content="Representation & enquiries. Management by Brad Gelfond, Strike Up the Brand." />
+<meta property="og:image" content="assets/img/headshot-01.jpg" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">Luca&nbsp;Fontaine</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="headshot.html" data-i18n="nav.headshot">Headshots</a>
+      <a href="resume.html" data-i18n="nav.resume">Resume</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+      <a href="contact.html" class="is-active" aria-current="page" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" id="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Contact ===== -->
+  <section class="section section--top contact" id="contact">
+    <div class="section__head reveal">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+      <h2 class="section__title" data-i18n="contact.title">Representation &amp; Enquiries</h2>
+    </div>
+
+    <div class="contact__cols">
+      <div class="contact__col reveal">
+        <h3><span data-i18n="contact.mgmt">Management</span> <span>(USA)</span></h3>
+        <p class="contact__name">Brad Gelfond</p>
+        <p class="contact__sub">Strike Up the Brand</p>
+        <p><a href="mailto:bradgelfond@strike-up-the-brand.com">bradgelfond@strike-up-the-brand.com</a></p>
+      </div>
+
+      <div class="contact__col reveal">
+        <h3 data-i18n="contact.direct">Direct</h3>
+        <p><a href="mailto:luca7.fontaine@gmail.com">luca7.fontaine@gmail.com</a></p>
+      </div>
+
+      <div class="contact__col reveal">
+        <h3 data-i18n="contact.profiles">Profiles</h3>
+        <p><a href="https://app.spotlight.com/8613-1271-8160" target="_blank" rel="noopener">Spotlight ↗</a></p>
+        <p><a href="https://pro.imdb.com/name/nm8026686/" target="_blank" rel="noopener">IMDb Pro ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__name">Luca Fontaine</p>
+  <p class="footer__meta"><span data-i18n="footer.meta">Actor · Dialect Coach</span> — <span id="year"></span></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
