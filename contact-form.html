@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-i18n="meta.title.cform">Contact me — Luca Fontaine</title>
+<meta name="description" content="Send a message to actor Luca Fontaine." />
+<meta name="author" content="Luca Fontaine" />
+<meta name="robots" content="noindex" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Luca Fontaine — Contact me" />
+<meta property="og:description" content="Send a message to Luca Fontaine." />
+<meta property="og:image" content="assets/img/headshot-01.jpg" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">Luca&nbsp;Fontaine</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="headshot.html" data-i18n="nav.headshot">Headshots</a>
+      <a href="resume.html" data-i18n="nav.resume">Resume</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+      <a href="contact.html" class="is-active" aria-current="page" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" id="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Contact form ===== -->
+  <section class="section section--top enquiry-page" id="contact-form">
+    <div class="section__head reveal">
+      <p class="eyebrow" data-i18n="cform.eyebrow">Contact</p>
+      <h2 class="section__title" data-i18n="cform.title">Contact me</h2>
+      <p class="section__lede" data-i18n="cform.lede">Drop me a message and I'll get back to you as soon as I can.</p>
+    </div>
+
+    <!--
+      SETUP: this form posts to Formspree. Replace YOUR_FORM_ID below with the
+      ID from your Formspree form (https://formspree.io — create a form pointed
+      at luca7.fontaine@gmail.com, then paste its endpoint here). Works on any
+      static host (Netlify, GitHub Pages, etc.). Until then, submissions won't send.
+    -->
+    <form class="enquiry reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New message from luca-fontaine.com" />
+      <!-- honeypot: bots fill this, humans don't -->
+      <p class="enquiry__hp" aria-hidden="true">
+        <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+      </p>
+
+      <div class="field-row">
+        <p class="field">
+          <label for="f-name" data-i18n="book.name">Name</label>
+          <input id="f-name" type="text" name="name" required autocomplete="name" />
+        </p>
+        <p class="field">
+          <label for="f-email" data-i18n="book.email">Email</label>
+          <input id="f-email" type="email" name="email" required autocomplete="email" />
+        </p>
+      </div>
+
+      <p class="field">
+        <label for="f-subject">
+          <span data-i18n="cform.subject">Subject</span>
+          <span class="field__opt" data-i18n="book.optional">optional</span>
+        </label>
+        <input id="f-subject" type="text" name="subject" />
+      </p>
+
+      <p class="field">
+        <label for="f-message" data-i18n="cform.message">Message</label>
+        <textarea id="f-message" name="message" rows="6" required></textarea>
+      </p>
+
+      <button class="btn" type="submit" data-i18n="cform.submit">Send message</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__name">Luca Fontaine</p>
+  <p class="footer__meta"><span data-i18n="footer.meta">Actor • Writer • Coach</span></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

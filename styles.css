@@ -319,6 +319,54 @@ a { color: inherit; text-decoration: none; }
 }
 .resumes__links a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
+/* Coaching page: center the résumé block and enlarge its buttons */
+.coaching .resumes {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+}
+.coaching .resumes__links a {
+  font-size: 1rem;
+  padding: 0.95rem 2rem;
+}
+
+/* ---------- Resume page ---------- */
+.resume-page .section__head { text-align: left; }
+.resumes--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+  margin: clamp(1.5rem, 3vw, 2.2rem) 0 0;
+  padding: 0;
+  border: none;
+}
+.resume-page .resumes__links a {
+  font-size: 1rem;
+  padding: 0.95rem 2rem;
+}
+
+.film-feature {
+  margin-top: clamp(3.5rem, 8vw, 6rem);
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 0.85fr 1.3fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+.film-feature__text .featured__desc {
+  margin: 0 0 2.2rem;
+  font-size: 1.1rem;
+  max-width: 44ch;
+}
+.film-feature .video { margin: 0; max-width: none; }
+
 /* ============================================================
    Full-bleed break
    ============================================================ */
@@ -355,23 +403,7 @@ a { color: inherit; text-decoration: none; }
    Coaching
    ============================================================ */
 .coaching { position: relative; }
-.names {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 0.5rem;
-  margin-bottom: clamp(3rem, 6vw, 4.5rem);
-  max-width: 70ch;
-}
-.names span {
-  font-family: var(--serif);
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  color: var(--ink-soft);
-}
-.names span:not(:last-child)::after {
-  content: "·";
-  margin-left: 0.55rem;
-  color: var(--accent);
-}
+.coaching__book { margin-top: 1.8rem; }
 .services { margin-bottom: clamp(3rem, 6vw, 4.5rem); max-width: 70ch; }
 .services__label {
   font-size: 0.72rem;
@@ -455,26 +487,25 @@ a { color: inherit; text-decoration: none; }
 }
 .coach {
   background: var(--paper);
-  padding: clamp(1.5rem, 3vw, 2.2rem);
+  padding: clamp(1.1rem, 2.2vw, 1.6rem);
   transition: background 0.35s var(--ease);
 }
 .coach:hover { background: var(--paper-2); }
 .coach h3 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: 1.35rem;
-  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
   line-height: 1.15;
 }
 .coach h3 span { color: var(--muted); font-size: 0.85em; font-style: italic; }
 .coach__meta {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   letter-spacing: 0.03em;
   color: var(--accent);
-  margin: 0 0 0.7rem;
+  margin: 0;
   text-transform: uppercase;
 }
-.coach__cast { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
 
 /* ============================================================
    Gallery
@@ -543,7 +574,7 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 .contact__cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
   border-top: 1px solid var(--line);
   padding-top: clamp(2.5rem, 5vw, 4rem);
@@ -557,7 +588,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   margin: 0 0 1.2rem;
 }
-.contact__col h3 span { color: var(--line); }
+.contact__col h3 span { color: var(--muted); }
 .contact__col p { margin: 0 0 0.4rem; }
 .contact__name {
   font-family: var(--serif);
@@ -571,6 +602,61 @@ a { color: inherit; text-decoration: none; }
   word-break: break-word;
 }
 .contact__col a:hover { border-color: var(--ink); color: var(--accent); }
+
+.contact__formbtn {
+  display: block;
+  width: fit-content;
+  margin: clamp(2.5rem, 6vw, 4.5rem) auto 0;
+  font-size: 1.05rem;
+  padding: 1.35rem 3.4rem;
+}
+
+/* ---------- Enquiry / contact form ---------- */
+.enquiry { max-width: 640px; }
+.enquiry__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.field { margin: 0 0 1.4rem; }
+.field label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.field__opt {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--line);
+  margin-left: 0.4rem;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.8rem 0.9rem;
+  transition: border-color 0.25s var(--ease);
+}
+.field textarea { resize: vertical; }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.enquiry .btn { margin-top: 0.6rem; cursor: pointer; }
 
 /* ============================================================
    Footer
@@ -805,10 +891,14 @@ a { color: inherit; text-decoration: none; }
   .hero__media { max-width: 420px; }
   .credits__list { columns: 1; }
   .coach-grid { grid-template-columns: 1fr 1fr; }
+  .coach-video { grid-template-columns: 1fr; gap: 1.4rem; }
+  .coach-video__media { max-width: 420px; }
+  .film-feature { grid-template-columns: 1fr; gap: 2rem; }
   .about { grid-template-columns: 1fr; }
   .about__media { max-width: 380px; }
   .about__media img { position: static; }
   .contact__cols { grid-template-columns: 1fr; gap: 2.5rem; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
   .grid { columns: 2; }
 }
 
@@ -917,18 +1007,28 @@ body.is-home .nav:not(.is-stuck) .nav__toggle span { background: var(--paper); }
 /* ============================================================
    Coaching video
    ============================================================ */
-.coach-video { margin: clamp(2.8rem, 6vw, 4.5rem) auto 0; max-width: 600px; }
+.coach-video {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 420px);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  align-items: center;
+  max-width: 860px;
+  margin: clamp(2.8rem, 6vw, 4.5rem) auto 0;
+}
+.coach-video__desc {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  line-height: 1.35;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.coach-video__media { margin: 0; }
 .coach-video video {
   width: 100%;
   height: auto;
   display: block;
   background: #000;
   border: 1px solid var(--line);
-}
-.coach-video figcaption {
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  margin-top: 0.9rem;
 }
 
 /* ============================================================
